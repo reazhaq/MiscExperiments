@@ -7,7 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CoreConcepts", "CoreConcept
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoriesOfDynamicTypes", "CoreConcepts\StoriesOfDynamicTypes\StoriesOfDynamicTypes.csproj", "{916E2980-006A-4ED9-96BD-83192095A89C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarefulWithEnum", "CarefulWithEnum\CarefulWithEnum.csproj", "{7A091DA7-FD11-45EB-A6AD-F4384AB7056F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task", "Task", "{71129CF2-D03C-4958-AF1C-5EDB558F5AF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarefulWithEnum", "CoreConcepts\CarefulWithEnum\CarefulWithEnum.csproj", "{7A091DA7-FD11-45EB-A6AD-F4384AB7056F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
