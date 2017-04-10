@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CoreConcepts", "CoreConcept
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoriesOfDynamicTypes", "CoreConcepts\StoriesOfDynamicTypes\StoriesOfDynamicTypes.csproj", "{916E2980-006A-4ED9-96BD-83192095A89C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarefulWithEnum", "CarefulWithEnum\CarefulWithEnum.csproj", "{7A091DA7-FD11-45EB-A6AD-F4384AB7056F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +19,16 @@ Global
 		{916E2980-006A-4ED9-96BD-83192095A89C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{916E2980-006A-4ED9-96BD-83192095A89C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{916E2980-006A-4ED9-96BD-83192095A89C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A091DA7-FD11-45EB-A6AD-F4384AB7056F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A091DA7-FD11-45EB-A6AD-F4384AB7056F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A091DA7-FD11-45EB-A6AD-F4384AB7056F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A091DA7-FD11-45EB-A6AD-F4384AB7056F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{916E2980-006A-4ED9-96BD-83192095A89C} = {6673E194-208D-4D65-AF87-B23974F7E72C}
+		{7A091DA7-FD11-45EB-A6AD-F4384AB7056F} = {6673E194-208D-4D65-AF87-B23974F7E72C}
 	EndGlobalSection
 EndGlobal
