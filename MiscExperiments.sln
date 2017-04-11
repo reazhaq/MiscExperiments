@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task", "Task", "{71129CF2-D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarefulWithEnum", "CoreConcepts\CarefulWithEnum\CarefulWithEnum.csproj", "{7A091DA7-FD11-45EB-A6AD-F4384AB7056F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormAppBackGroundWorker", "Task\WinFormAppBackGroundWorker\WinFormAppBackGroundWorker.csproj", "{51493833-7908-4968-B357-207F5BCF19CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{7A091DA7-FD11-45EB-A6AD-F4384AB7056F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A091DA7-FD11-45EB-A6AD-F4384AB7056F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A091DA7-FD11-45EB-A6AD-F4384AB7056F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51493833-7908-4968-B357-207F5BCF19CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51493833-7908-4968-B357-207F5BCF19CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51493833-7908-4968-B357-207F5BCF19CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51493833-7908-4968-B357-207F5BCF19CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,5 +38,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{916E2980-006A-4ED9-96BD-83192095A89C} = {6673E194-208D-4D65-AF87-B23974F7E72C}
 		{7A091DA7-FD11-45EB-A6AD-F4384AB7056F} = {6673E194-208D-4D65-AF87-B23974F7E72C}
+		{51493833-7908-4968-B357-207F5BCF19CA} = {71129CF2-D03C-4958-AF1C-5EDB558F5AF6}
 	EndGlobalSection
 EndGlobal
