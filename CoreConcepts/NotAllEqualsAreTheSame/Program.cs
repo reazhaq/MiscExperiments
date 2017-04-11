@@ -11,6 +11,8 @@ namespace NotAllEqualsAreTheSame
         static void Main(string[] args)
         {
             AreTwoPointsEqual();
+            AreTwoPointsWithStaticEquals_Equal();
+            AreTwoPointStructureEquatable_Equal();
         }
 
         private static void AreTwoPointsEqual()
@@ -48,6 +50,20 @@ namespace NotAllEqualsAreTheSame
             // but Equals; still forces boxes
             var p1EqP2 = p1.Equals(p2);
             Console.WriteLine($"p1.Equals(p2): {p1EqP2}");
+        }
+
+        private static void AreTwoPointStructureEquatable_Equal()
+        {
+            var p1 = new PointStructureEquatable(5, 5);
+            var p2 = new PointStructureEquatable(5, 5);
+
+            // no boxing here...
+            // result is true
+            var p1EqualsP2 = p1 == p2;
+
+            // no boxing here...
+            // true
+            var p1EqP2 = p1.Equals(p2);
         }
     }
 }
