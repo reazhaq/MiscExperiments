@@ -1,4 +1,4 @@
-﻿namespace NotAllEqualsAreTheSame
+﻿namespace NotAllEqualsAreTheSame.Structure
 {
     struct PointStructure
     {

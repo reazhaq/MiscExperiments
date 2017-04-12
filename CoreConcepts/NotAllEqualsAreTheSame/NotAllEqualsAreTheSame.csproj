@@ -44,9 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PointStructure.cs" />
-    <Compile Include="PointStructureEquatable.cs" />
-    <Compile Include="PointStructureWithStaticEqual.cs" />
+    <Compile Include="Generic\SomeClass.cs" />
+    <Compile Include="Generic\SomeIEquatableClass.cs" />
+    <Compile Include="Generic\SomeIEquatableStructure.cs" />
+    <Compile Include="Structure\PointStructure.cs" />
+    <Compile Include="Structure\PointStructureEquatable.cs" />
+    <Compile Include="Structure\PointStructureWithStaticEqual.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

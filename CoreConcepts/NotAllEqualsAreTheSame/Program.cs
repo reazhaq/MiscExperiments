@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using NotAllEqualsAreTheSame.Structure;
+using System;
 
 namespace NotAllEqualsAreTheSame
 {
@@ -10,6 +7,7 @@ namespace NotAllEqualsAreTheSame
     {
         static void Main(string[] args)
         {
+            // structure
             AreTwoPointsEqual();
             AreTwoPointsWithStaticEquals_Equal();
             AreTwoPointStructureEquatable_Equal();

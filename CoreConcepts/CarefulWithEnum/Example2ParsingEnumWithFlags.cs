@@ -36,7 +36,23 @@ namespace CarefulWithEnum
                     Console.WriteLine($"--->{colorString} is not a member of the Colors enumeration.");
             }
 
+            // another fun little thing with flags...
+            // when you have 6 flags starting with zero...
+            // you actually have 32 enums
+            for (int i = 0; i <= 35; i++)
+            {
+                var someColor = (Color2)i;
+                Console.WriteLine($"{IsFlagDefined(someColor)}: {i} = {someColor}");
+            }
+
             Console.WriteLine("-----> done Example2ParsingEnumWithFlags.SomeMethod <-----");
+        }
+
+        // there is no easy way to check if an enum is a flag or not
+        // I can look for comma; like I had done above
+        static bool IsFlagDefined(Enum e)
+        {
+            return !decimal.TryParse(e.ToString(), out decimal someDecimalValue);
         }
     }
 }
