@@ -8,6 +8,8 @@ namespace NotAllEqualsAreTheSame
         {
             // when possible use operator == and !=
             OperatorUse();
+            // virtual Equals always guaranteed to work
+            VirtualEqualsBetterWork();
         }
 
         private static void OperatorUse()
@@ -21,6 +23,22 @@ namespace NotAllEqualsAreTheSame
 
             // unless, the type has specific overrides
             var areStrsEqual = (x.ToString()) == (y.ToString());
+
+            // some types makes sure that == works in a different way
+            double someDouble = double.NaN;
+            var areNanEquals = someDouble == someDouble;
+        }
+
+        private static void VirtualEqualsBetterWork()
+        {
+            double someDouble = double.NaN;
+            // this is false
+            var areNanEquals = someDouble == someDouble;
+            // this is true
+            var vEqlWorks = someDouble.Equals(someDouble);
+            // it is also reflexive
+            var vEqlReflexive = double.NaN.Equals(someDouble);
+            var vEqlReflexive2 = someDouble.Equals(double.NaN);
         }
     }
 }
