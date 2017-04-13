@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Example1Simple.cs" />
     <Compile Include="Example2Structure.cs" />
+    <Compile Include="Example3EqInsideGenerics.cs" />
     <Compile Include="Generic\SomeClass.cs" />
     <Compile Include="Generic\SomeIEquatableClass.cs" />
     <Compile Include="Generic\SomeIEquatableStructure.cs" />

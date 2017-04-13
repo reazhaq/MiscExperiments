@@ -16,10 +16,11 @@ namespace NotAllEqualsAreTheSame
             int x = 5; int y = 5;
             var areEqual = x == y;
 
-            // careful it doesn't work for everything
+            // careful it doesn't work for everything - this gives you false
             var areObjsEqual = ((object)x) == ((object)y);
 
             // unless, the type has specific overrides
+            // but string (ref type) have special overload
             var areStrsEqual = (x.ToString()) == (y.ToString());
         }
     }

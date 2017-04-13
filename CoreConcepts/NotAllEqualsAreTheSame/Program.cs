@@ -6,6 +6,7 @@
         {
             Example1Simple.SomeMethod();
             Example2Structure.SomeMethod();
+            Example3EqInsideGenerics.SomeMethod();
         }
     }
 }
