@@ -9,7 +9,7 @@ namespace NotAllEqualsAreTheSame
             // when possible use operator == and !=
             OperatorUse();
             // virtual Equals always guaranteed to work
-            VirtualEqualsBetterWork();
+            VirtualEqualsHasToWork();
         }
 
         private static void OperatorUse()
@@ -30,7 +30,7 @@ namespace NotAllEqualsAreTheSame
             var areNanEquals = someDouble == someDouble;
         }
 
-        private static void VirtualEqualsBetterWork()
+        private static void VirtualEqualsHasToWork()
         {
             double someDouble = double.NaN;
             // this is false

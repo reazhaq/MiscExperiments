@@ -15,5 +15,20 @@ namespace NotAllEqualsAreTheSame.Generic
 
             return SomeValue == other.SomeValue;
         }
+
+        // with equals override - need to check for null
+        // and object of same type
+        public override bool Equals(object obj)
+        {
+            //if (obj is null || obj.GetType() != GetType() ) return false;
+            if (obj is null || !(obj is SomeIEquatableClass)) return false;
+
+            return SomeValue == ((SomeIEquatableClass)obj).SomeValue;
+        }
+
+        public override int GetHashCode()
+        {
+            return SomeValue.GetHashCode();
+        }
     }
 }
