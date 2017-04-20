@@ -31,7 +31,7 @@ namespace NotAllEqualsAreTheSame.Structure
         // this override doesn't help; it still forces you to do boxing
         public override bool Equals(object obj)
         {
-            if (obj == null || !(obj is PointStructureEquatable))
+            if (!(obj is PointStructureEquatable))
                 return false;
 
             return this == ((PointStructureEquatable)obj);

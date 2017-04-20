@@ -1,6 +1,7 @@
 ﻿using NotAllEqualsAreTheSame.Generic;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace NotAllEqualsAreTheSame
 {
@@ -12,7 +13,16 @@ namespace NotAllEqualsAreTheSame
             someGenericClassThatDoesSomeComparisons.SetValue(null);
             someGenericClassThatDoesSomeComparisons.SetValue(new SomeClass { SomeData = 5 });
             someGenericClassThatDoesSomeComparisons.SetValue2(null);
-            someGenericClassThatDoesSomeComparisons.SetValue2(new SomeClass { SomeData = 10 });
+            try
+            {
+                someGenericClassThatDoesSomeComparisons.SetValue2(new SomeClass {SomeData = 10});
+            }
+            catch
+            {
+                Debug.WriteLine("this is a known exception");
+                someGenericClassThatDoesSomeComparisons.SetValue(new SomeClass { SomeData = 10 });
+            }
+            someGenericClassThatDoesSomeComparisons.SetValue2(new SomeDerivedClass {SomeData = 10});
 
             var someGenericClassThatDoesSomeComparisonsBetterCls = new SomeGenericClassThatDoesSomeComparisonsBetter<SomeIEquatableClass>();
             someGenericClassThatDoesSomeComparisonsBetterCls.SetValue(null);
@@ -38,6 +48,8 @@ namespace NotAllEqualsAreTheSame
 
         public void SetValue2(T newValue)
         {
+            // calling virtual equal has its issue
+            // what if SomeProperty is null
             if (SomeProperty.Equals(newValue))
                 return;
 

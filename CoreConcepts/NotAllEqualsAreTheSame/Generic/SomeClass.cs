@@ -1,8 +1,10 @@
-﻿namespace NotAllEqualsAreTheSame.Generic
+﻿using System.Diagnostics;
+
+namespace NotAllEqualsAreTheSame.Generic
 {
     // this class overrides Equals; to ensure value equality
     // and forced to override hash code; because of Equals override
-    class SomeClass
+    public class SomeClass
     {
         public int SomeData { get; set; }
 
@@ -10,8 +12,13 @@
         // and object of same type
         public override bool Equals(object obj)
         {
-            //if (obj is null || obj.GetType() != GetType() ) return false;
-            if (obj is null || !(obj is SomeClass)) return false;
+            //if (obj is null || !(obj is SomeClass)) return false;
+            if (!(obj is SomeClass)) return false;
+
+            //if (obj.GetType() != GetType())
+            //    Debug.WriteLine($"{obj.GetType()} != {GetType()}");
+            //if(obj.GetType() != typeof(SomeClass))
+            //    Debug.WriteLine($"{obj.GetType()} != {typeof(SomeClass)}");
 
             return SomeData == ((SomeClass)obj).SomeData;
         }

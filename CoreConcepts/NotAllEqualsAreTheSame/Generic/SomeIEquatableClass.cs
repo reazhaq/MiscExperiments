@@ -20,8 +20,8 @@ namespace NotAllEqualsAreTheSame.Generic
         // and object of same type
         public override bool Equals(object obj)
         {
-            //if (obj is null || obj.GetType() != GetType() ) return false;
-            if (obj is null || !(obj is SomeIEquatableClass)) return false;
+            //if (obj is null || !(obj is SomeIEquatableClass)) return false;
+            if(!(obj is SomeIEquatableClass)) return false;
 
             return SomeValue == ((SomeIEquatableClass)obj).SomeValue;
         }

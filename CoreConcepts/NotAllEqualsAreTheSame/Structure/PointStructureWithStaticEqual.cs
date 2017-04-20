@@ -26,7 +26,7 @@
         // this override doesn't help; it still forces you to do boxing
         public override bool Equals(object obj)
         {
-            if (obj == null || !(obj is PointStructureWithStaticEqual))
+            if (!(obj is PointStructureWithStaticEqual))
                 return false;
 
             return this==((PointStructureWithStaticEqual)obj);
