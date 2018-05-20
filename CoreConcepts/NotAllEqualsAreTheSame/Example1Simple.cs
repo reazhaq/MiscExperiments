@@ -58,13 +58,28 @@ namespace NotAllEqualsAreTheSame
 
             // test, test, test, test
             Console.WriteLine($"s1:{s1}, s2:{s2}, s3:{s3}, s4:{s4}, s5:{s5}");
+            
             // true, true, true -- how come two different strings have the same ref.
-            Console.WriteLine($"object.ReferenceEquals(s1, s2):{object.ReferenceEquals(s1, s2)}, s1 == s2:{s1 == s2}, s1.Equals(s2):{s1.Equals(s2)}");
-            Console.WriteLine($"object.ReferenceEquals(s1, s5):{object.ReferenceEquals(s1, s5)}, object.ReferenceEquals(s3, s5):{object.ReferenceEquals(s3, s5)}");
+            Console.WriteLine($"object.ReferenceEquals(s1, s2):{object.ReferenceEquals(s1, s2)}, " + //true
+                              $"s1 == s2:{s1 == s2}, " + //true
+                              $"s1.Equals(s2):{s1.Equals(s2)}"); //true
+
+            Console.WriteLine($"object.ReferenceEquals(s1, s5):{object.ReferenceEquals(s1, s5)}, " + //false
+                              $"object.ReferenceEquals(s3, s4):{object.ReferenceEquals(s3, s4)}, " + // true
+                              $"object.ReferenceEquals(s3, s5):{object.ReferenceEquals(s3, s5)}"); // false
+
             // false, true, true
-            Console.WriteLine($"object.ReferenceEquals(s1, s3):{object.ReferenceEquals(s1, s3)}, s1 == s3:{s1 == s3}, s1.Equals(s3):{s1.Equals(s3)}");
+            Console.WriteLine($"object.ReferenceEquals(s1, s3):{object.ReferenceEquals(s1, s3)}, " + //false
+                              $"s1 == s3:{s1 == s3}, " + // true
+                              $"s1.Equals(s3):{s1.Equals(s3)}"); //true
+
             // false, false, true -- s1==s4; because of one being object - it goes for ref. equal; not string == operator overload
-            Console.WriteLine($"object.ReferenceEquals(s1, s4):{object.ReferenceEquals(s1, s4)}, s1 == s4:{s1 == s4}, s1.Equals(s4):{s1.Equals(s4)}, s4.Equals(s1):{s4.Equals(s1)}");
+            Console.WriteLine($"object.ReferenceEquals(s1, s4):{object.ReferenceEquals(s1, s4)}, " + //false
+                              $"s1 == s4:{s1 == s4}, " + //false
+                              $"s1.Equals(s4):{s1.Equals(s4)}, " + //true
+                              $"s4.Equals(s1):{s4.Equals(s1)}"); //true
         }
     }
 }
+
+

@@ -26,7 +26,8 @@ namespace CarefulWithEnum
             }
             Console.Write(Environment.NewLine);
 
-            string[] someColorStrings = { "7", "2", "blue", "Yellow", null, "red,white", "white,blue" };
+            string[] someColorStrings = { "7", "2", "blue", "Yellow", null, "red,white", "white,blue", "blue,green" };
+            Console.WriteLine($"checking someColorStrings: {string.Join("; ", someColorStrings)}");
             // what to expect - yellow and null shall fail to parse; but what about "red,white"
             foreach(var someColorString in someColorStrings)
             {
@@ -39,9 +40,13 @@ namespace CarefulWithEnum
             {
                 if (IsThisAValidEnumValueInt(loopIndex2))
                     WhatIsMyColorFromANumber(loopIndex2);
+                else
+                    Console.WriteLine($"{loopIndex2} is not a valid enum number.");
 
                 if (IsThisAValidEnumValueString(loopIndex2.ToString()))
                     WhatIsMyColorFromAString(loopIndex2.ToString());
+                else
+                    Console.WriteLine($"\"{loopIndex2}\" is not a valid enum string");
 
                 var someColorString = someColorStrings[loopIndex2];
                 Console.WriteLine($"Checking {someColorString} from someColorStrings array");
