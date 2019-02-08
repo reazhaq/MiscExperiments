@@ -2,6 +2,6 @@
 {
     public class Triangle : Shape
     {
-        private new int Id=0;
+        public new int Id=0;
     }
 }
