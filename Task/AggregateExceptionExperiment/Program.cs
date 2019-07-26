@@ -16,6 +16,7 @@ namespace AggregateExceptionExperiment
     {
         static async Task Main(string[] args)
         {
+            await Task.Delay(0);
             Console.WriteLine("Hello World!");
             //await Experiment01.Method1(); //// this one throws an unhandled exception
             //await Experiment02.Method2();
@@ -23,7 +24,8 @@ namespace AggregateExceptionExperiment
             try
             {
                 //await Experiment03.AggregateExceptionExperiment();
-                Experiment03.AggregateExceptionExperiment().Wait();
+                //Experiment03.AggregateExceptionExperiment().Wait();
+                Experiment03.AggregateExceptionExperiment2().Wait();
             }
             catch (Exception e)
             {
