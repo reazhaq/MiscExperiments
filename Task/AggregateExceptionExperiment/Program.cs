@@ -25,7 +25,9 @@ namespace AggregateExceptionExperiment
             {
                 //await Experiment03.AggregateExceptionExperiment();
                 //Experiment03.AggregateExceptionExperiment().Wait();
-                Experiment03.AggregateExceptionExperiment2().Wait();
+                //Experiment03.AggregateExceptionExperiment2().Wait();
+                //Experiment03.AggregateExceptionExperiment3().Wait();
+                Experiment03.AggregateExceptionExperiment4().Wait();
             }
             catch (Exception e)
             {
