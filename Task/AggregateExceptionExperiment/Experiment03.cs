@@ -302,11 +302,12 @@ namespace AggregateExceptionExperiment
             var t2 = Task22();
             var t3 = Task23();
             var t4 = Task24();
+            var t5 = Task.WhenAll(t3, t4);
 
 
             try
             {
-                Task.WaitAll(t1, t2, t3, t4);
+                Task.WaitAll(t1, t2, t5);
                 sw.Stop();
             }
             catch (AggregateException aggregateException)
